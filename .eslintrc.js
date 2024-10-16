@@ -9,12 +9,25 @@ module.exports = {
   env: {
     node: true,
   },
-  extends: [
-    'vuetify',
-    '@vue/eslint-config-typescript',
-    './.eslintrc-auto-import.json',
-  ],
-  rules: {
-    'vue/multi-word-component-names': 'off',
+  parser: "vue-eslint-parser",
+  parserOptions: {
+    parser: "@typescript-eslint/parser",
+    ecmaVersion: 2020,
+    sourceType: "module",
   },
-}
+  extends: [
+    "vuetify",
+    "@vue/eslint-config-typescript",
+    "./.eslintrc-auto-import.json",
+    "eslint:recommended",
+    "plugin:vue/vue3-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:prettier/recommended",
+  ],
+  plugins: ["prettier"],
+  rules: {
+    "vue/multi-word-component-names": "off",
+    "prettier/prettier": "error",
+  },
+};
