@@ -4,10 +4,13 @@
 // Read more: https://github.com/vuejs/core/pull/3399
 export {}
 
-declare module "vue" {
+/* prettier-ignore */
+declare module 'vue' {
   export interface GlobalComponents {
-    HelloWorld: (typeof import("./src/components/HelloWorld.vue"))["default"];
-    RouterLink: (typeof import("vue-router"))["RouterLink"];
-    RouterView: (typeof import("vue-router"))["RouterView"];
+    AppFooter: typeof import('./components/AppFooter.vue')['default']
+    HelloWorld: typeof import('./components/HelloWorld.vue')['default']
+    PageOne: typeof import('./components/PageOne.vue')['default']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
   }
 }
