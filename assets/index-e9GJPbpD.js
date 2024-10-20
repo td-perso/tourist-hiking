@@ -1,0 +1,1 @@
+import{_ as o}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{o as t,e as a,f as n}from"./index-DJhTb-vd.js";const r={name:"Index"};function s(d,e,c,l,p,_){return t(),a("div",null,e[0]||(e[0]=[n("main",null,[n("h1",null,"Index")],-1)]))}const m=o(r,[["render",s],["__scopeId","data-v-bda91e64"]]);export{m as default};
