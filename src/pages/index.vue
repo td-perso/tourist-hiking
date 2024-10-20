@@ -1,7 +1,18 @@
 <template>
-  <HelloWorld />
+  <div>
+    <main>
+      <h1>Index</h1>
+    </main>
+  </div>
 </template>
 
-<script lang="ts" setup>
-//
+<script>
+
+  export default {
+    name: 'Index',
+  }
 </script>
+
+<style scoped>
+/* Add your styles here */
+</style>
