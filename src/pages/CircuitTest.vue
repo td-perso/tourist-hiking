@@ -1,6 +1,9 @@
 <template>
   <div>
-    <a :href="googleMapsUrl" target="_blank">Lancer la navigation</a>
+    <main>
+      <h1>Circuit Test</h1>
+      <a :href="googleMapsUrl" target="_blank">Lancer la navigation</a>
+    </main>
   </div>
 </template>
 
@@ -9,6 +12,9 @@
   import { gpx } from '@mapbox/togeojson'
 
   export default {
+    name: 'CircuitTest',
+    components: {
+    },
     data () {
       return {
         googleMapsUrl: '',

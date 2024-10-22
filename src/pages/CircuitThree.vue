@@ -1,7 +1,7 @@
 <template>
   <div>
     <main>
-      <h1>Accueil</h1>
+      <h1>Circuit 3</h1>
     </main>
   </div>
 </template>
@@ -9,7 +9,9 @@
 <script>
 
   export default {
-    name: 'Index',
+    name: 'CircuitThree',
+    components: {
+    },
   }
 </script>
 

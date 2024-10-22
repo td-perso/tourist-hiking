@@ -1,18 +1,11 @@
 <template>
   <div>
     <v-navigation-drawer v-model="drawer" app>
-      <v-list flat>
-        <v-subheader>MENU</v-subheader>
-        <v-list-item-group v-model="selectedItem" color="primary">
-          <v-list-item v-for="(item, i) in items" :key="i" link :to="item.to">
-            <v-list-item-icon>
-              <v-icon>{{ item.icon }}</v-icon>
-            </v-list-item-icon>
-            <v-list-item-content>
-              <v-list-item-title>{{ item.text }}</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list-item-group>
+      <v-list v-model="selectedItem" color="primary" flat>
+        <v-list-item v-for="(item, i) in items" :key="i" link :to="item.to">
+          <v-icon>{{ item.icon }}</v-icon>
+          <v-list-item-title>{{ item.text }}</v-list-item-title>
+        </v-list-item>
       </v-list>
       <template #append>
         <div class="pa-2">
@@ -44,11 +37,11 @@
       drawer: false,
       selectedItem: 1,
       items: [
-        { text: 'Home', icon: 'mdi-home', to: 'Index' },
-        { text: 'Page1', icon: 'mdi-arrow-right-box', to: 'PageOne' },
-        { text: 'Page2', icon: 'mdi-arrow-right-box', to: 'PageTwo' },
-        { text: 'Page3', icon: 'mdi-arrow-right-box', to: 'PageThree' },
-        { text: 'AppPinia', icon: 'mdi-arrow-right-box', to: 'appPinia' },
+        { text: 'Accueil', icon: 'mdi-home', to: 'Index' },
+        { text: 'Circuit 1', icon: 'mdi-arrow-right-box', to: 'CircuitOne' },
+        { text: 'Circuit 2', icon: 'mdi-arrow-right-box', to: 'CircuitTwo' },
+        { text: 'Circuit 3', icon: 'mdi-arrow-right-box', to: 'CircuitThree' },
+        { text: 'Circuit Test', icon: 'mdi-arrow-right-box', to: 'CircuitTest' },
       ],
     }),
     computed: {
