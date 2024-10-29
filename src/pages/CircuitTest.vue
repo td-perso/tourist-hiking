@@ -96,8 +96,14 @@
       },
       launchNavigation () {
         if (this.isMobile()) {
-          const stops = this.waypoints.map(wp => `via:${wp.location.lat},${wp.location.lng}`).join('/')
-          const url = `google.navigation:q=${this.endCoords.lat},${this.endCoords.lng}&waypoints=${stops}`
+          const profile = 'bicycle' // Peut être 'foot', 'bicycle', selon le mode de transport souhaité
+          const destination = `${this.endCoords.lat},${this.endCoords.lng}`
+          const waypoints = this.waypoints
+            .map(wp => `&via=${wp.location.lat},${wp.location.lng}`)
+            .join('')
+          // URL pour OsmAnd
+          const url = `osmand.navigation:q=${destination}&profile=${profile}${waypoints}`
+          // Ouvrir l'URL
           window.open(url, '_blank')
         } else {
           window.open(this.googleMapsUrl, '_blank')
