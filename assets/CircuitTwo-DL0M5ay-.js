@@ -1,1 +1,0 @@
-import{_ as t}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{M as n,am as a,an as o}from"./index-CymsAM5c.js";const r={name:"CircuitTwo",components:{}};function s(c,e,i,p,l,m){return n(),a("div",null,e[0]||(e[0]=[o("main",null,[o("h1",null,"Circuit 2")],-1)]))}const _=t(r,[["render",s],["__scopeId","data-v-e8ad4649"]]);export{_ as default};
