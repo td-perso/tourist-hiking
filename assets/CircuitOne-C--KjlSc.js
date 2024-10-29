@@ -1,1 +1,0 @@
-import{_ as n}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{R as o,ax as r,Y as t}from"./index-ylgjxBb7.js";const a={name:"CircuitOne",components:{}};function s(c,e,i,p,l,u){return o(),r("div",null,e[0]||(e[0]=[t("main",null,[t("h1",null,"Circuit 1")],-1)]))}const d=n(a,[["render",s],["__scopeId","data-v-6311c595"]]);export{d as default};
