@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>PARCOURS-5km-hiking-ibp24.gpx</name>
+    <NetworkLink>
+      <name>Test</name>
+      <Link>
+        <href><![CDATA[https://www.google.com/maps/d/kml?forcekml=1&mid=1uC3lWgq3VNA2yOEt9Z0-BMsfTvOmbII&lid=lppz93EWCPQ]]></href>
+      </Link>
+    </NetworkLink>
+  </Document>
+</kml>
