@@ -91,8 +91,16 @@
           }
         )
       },
+      isMobile () {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+      },
       launchNavigation () {
-        window.open(this.googleMapsUrl, '_blank')
+        if (this.isMobile()) {
+          const url = `google.navigation:q=${this.endCoords.lat},${this.endCoords.lng}`
+          window.open(url, '_blank')
+        } else {
+          window.open(this.googleMapsUrl, '_blank')
+        }
       },
     },
   }
