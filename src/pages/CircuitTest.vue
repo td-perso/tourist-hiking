@@ -96,7 +96,8 @@
       },
       launchNavigation () {
         if (this.isMobile()) {
-          const url = `google.navigation:q=${this.endCoords.lat},${this.endCoords.lng}`
+          const stops = this.waypoints.map(wp => `via:${wp.location.lat},${wp.location.lng}`).join('/')
+          const url = `google.navigation:q=${this.endCoords.lat},${this.endCoords.lng}&waypoints=${stops}`
           window.open(url, '_blank')
         } else {
           window.open(this.googleMapsUrl, '_blank')
