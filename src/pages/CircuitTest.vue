@@ -96,13 +96,14 @@
       },
       launchNavigation () {
         if (this.isMobile()) {
+          const profile = 'bicycle' // Peut être 'foot', 'bicycle', selon le mode de transport souhaité
           const destination = `${this.endCoords.lat},${this.endCoords.lng}`
           const waypoints = this.waypoints
-            .map(wp => `${wp.location.lat},${wp.location.lng}`)
-            .join('|') // Les waypoints sont séparés par des " | " dans OsmAnd avec geo
+            .map(wp => `&via=${wp.location.lat},${wp.location.lng}`)
+            .join('')
 
-          // URL compatible avec le format "geo:" pour OsmAnd
-          const url = `geo:0,0?q=${destination}(${encodeURIComponent('Destination')})&waypoints=${encodeURIComponent(waypoints)}`
+          // URL pour OsmAnd
+          const url = `osmand.navigation:q=${destination}&profile=${profile}${waypoints}`
 
           // Ouvrir l'URL
           window.open(url, '_blank')
