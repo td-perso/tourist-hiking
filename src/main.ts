@@ -6,7 +6,7 @@
 
 // Plugins
 import { registerPlugins } from '@/plugins'
-
+import 'leaflet/dist/leaflet.css'
 // Components
 import App from './App.vue'
 
