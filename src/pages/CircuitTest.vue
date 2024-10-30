@@ -47,14 +47,9 @@
             position => {
               const origin = `${position.coords.latitude},${position.coords.longitude}`
               const destination = `${this.endCoords.lat},${this.endCoords.lng}`
-
-              // Le format "geo:" avec des coordonnées de destination et une chaîne de requête
-              const waypointsString = this.waypoints.map(wp => `${wp.lat},${wp.lng}`).join(';')
-
-              const geoUrl = `geo:0,0?q=${destination}(${encodeURIComponent('Destination')})&waypoints=${waypointsString}`
-
-              // Ouvrir le lien en espérant que cela lance l'application Google Maps
-              window.location.href = geoUrl
+              const waypoints = this.waypoints.map(wp => `${wp.lat},${wp.lng}`).join('|')
+              const url = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&waypoints=${waypoints}`
+              window.open(url, '_blank')
             },
             error => {
               console.error('Erreur lors de la récupération de la position', error)
