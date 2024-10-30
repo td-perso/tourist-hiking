@@ -47,13 +47,14 @@
             position => {
               const origin = `${position.coords.latitude},${position.coords.longitude}`
               const destination = `${this.endCoords.lat},${this.endCoords.lng}`
-              const waypoints = this.waypoints.map(wp => `${wp.lat},${wp.lng}`).join('|')
 
-              // Utilisation du format d'intention pour essayer d'ouvrir directement l'application Google Maps
-              const url = `google.maps://?api=1&origin=${origin}&destination=${destination}&waypoints=${waypoints}`
+              // Le format "geo:" avec des coordonnées de destination et une chaîne de requête
+              const waypointsString = this.waypoints.map(wp => `${wp.lat},${wp.lng}`).join(';')
 
-              // Essayez d'ouvrir le lien avec l'intent
-              window.location.href = url
+              const geoUrl = `geo:0,0?q=${destination}(${encodeURIComponent('Destination')})&waypoints=${waypointsString}`
+
+              // Ouvrir le lien en espérant que cela lance l'application Google Maps
+              window.location.href = geoUrl
             },
             error => {
               console.error('Erreur lors de la récupération de la position', error)
@@ -61,7 +62,7 @@
             }
           )
         } else {
-          // Si on est sur un navigateur de bureau ou un autre appareil, fallback vers URL standard
+          // Fallback pour le navigateur desktop
           const origin = 'My+Location'
           const destination = `${this.endCoords.lat},${this.endCoords.lng}`
           const waypoints = this.waypoints.map(wp => `${wp.lat},${wp.lng}`).join('|')
