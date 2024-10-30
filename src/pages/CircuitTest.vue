@@ -42,27 +42,40 @@
         return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
       },
       launchNavigation () {
-        if (this.isMobile()) {
-          navigator.geolocation.getCurrentPosition(
-            position => {
-              const origin = `${position.coords.latitude},${position.coords.longitude}`
-              const destination = `${this.endCoords.lat},${this.endCoords.lng}`
-              const waypoints = this.waypoints.map(wp => `${wp.lat},${wp.lng}`).join('|')
-              const url = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&waypoints=${waypoints}`
-              window.open(url, '_blank')
-            },
-            error => {
-              console.error('Erreur lors de la récupération de la position', error)
-              alert('Impossible de récupérer votre position actuelle pour lancer la navigation.')
-            }
-          )
-        } else {
-          const origin = 'My+Location'
-          const destination = `${this.endCoords.lat},${this.endCoords.lng}`
-          const waypoints = this.waypoints.map(wp => `${wp.lat},${wp.lng}`).join('|')
-          const url = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&waypoints=${waypoints}`
-          window.open(url, '_blank')
-        }
+        navigator.geolocation.getCurrentPosition(
+          position => {
+            const origin = `${position.coords.latitude},${position.coords.longitude}`
+            const destination = `${this.endCoords.lat},${this.endCoords.lng}`
+            const waypoints = this.waypoints.map(wp => `${wp.lat},${wp.lng}`).join('|')
+            const url = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&waypoints=${waypoints}`
+            window.open(url, '_blank')
+          },
+          error => {
+            console.error('Erreur lors de la récupération de la position', error)
+            alert('Impossible de récupérer votre position actuelle pour lancer la navigation.')
+          }
+        )
+        // if (this.isMobile()) {
+        //   navigator.geolocation.getCurrentPosition(
+        //     position => {
+        //       const origin = `${position.coords.latitude},${position.coords.longitude}`
+        //       const destination = `${this.endCoords.lat},${this.endCoords.lng}`
+        //       const waypoints = this.waypoints.map(wp => `${wp.lat},${wp.lng}`).join('|')
+        //       const url = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&waypoints=${waypoints}`
+        //       window.open(url, '_blank')
+        //     },
+        //     error => {
+        //       console.error('Erreur lors de la récupération de la position', error)
+        //       alert('Impossible de récupérer votre position actuelle pour lancer la navigation.')
+        //     }
+        //   )
+        // } else {
+        //   const origin = 'My+Location'
+        //   const destination = `${this.endCoords.lat},${this.endCoords.lng}`
+        //   const waypoints = this.waypoints.map(wp => `${wp.lat},${wp.lng}`).join('|')
+        //   const url = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&waypoints=${waypoints}`
+        //   window.open(url, '_blank')
+        // }
       },
     },
   }
