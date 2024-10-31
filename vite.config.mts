@@ -6,6 +6,8 @@ import Layouts from 'vite-plugin-vue-layouts'
 import Vue from '@vitejs/plugin-vue'
 import VueRouter from 'unplugin-vue-router/vite'
 import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
+import Icons from 'unplugin-icons/vite'
+import IconsResolver from 'unplugin-icons/resolver'
 
 // Utilities
 import { defineConfig } from 'vite'
@@ -15,6 +17,9 @@ import { fileURLToPath, URL } from 'node:url'
 export default defineConfig({
   base: '/tourist-hiking/',
   plugins: [
+    Icons({
+      autoInstall: true,
+    }),
     VueRouter({
       dts: 'src/typed-router.d.ts',
     }),
@@ -34,6 +39,9 @@ export default defineConfig({
     }),
     Components({
       dts: 'src/components.d.ts',
+      resolvers: [
+        IconsResolver(),
+      ],
     }),
     Vue({
       template: { transformAssetUrls },

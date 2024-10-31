@@ -1,9 +1,12 @@
 <template>
-  <v-footer app>
-    <v-col class="d-flex justify-center align-center">
+  <v-footer app class="d-flex flex-column" color="#362f2d">
+    <div class="d-flex w-100 justify-center align-center">
       <v-img max-height="50" max-width="50" src="@/assets/flag.png" />
-      <!-- {{ new Date().getFullYear() }} — <strong>{{ appVersion }}</strong> -->
-    </v-col>
+    </div>
+    <div class="w-100 text-center">
+      {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+      {{ new Date().getFullYear() }} — <strong>{{ appVersion }}</strong>
+    </div>
   </v-footer>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-navigation-drawer v-model="drawer">
+    <v-navigation-drawer v-model="drawer" temporary>
       <v-list-item
         link
         prepend-icon="mdi-close"
@@ -28,13 +28,15 @@
         </div>
       </template>
     </v-navigation-drawer>
-    <v-app-bar>
+    <v-app-bar color="white">
       <v-app-bar-nav-icon @click="drawer = !drawer" />
       <v-spacer />
       <v-toolbar-title>
-        <h1 class="title">
-          Les Circuits de Constantine
-        </h1>
+        <router-link class="title-link" to="Index">
+          <h1 class="title d-flex justify-center align-center text-h6 text-md-h5 text-lg-h4 text-xl-h3">
+            Les Circuits de Constantine
+          </h1>
+        </router-link>
       </v-toolbar-title>
       <v-spacer />
       <v-img max-height="50" max-width="50" src="@/assets/logo.png" />
@@ -68,11 +70,17 @@
 </script>
 
 <style scoped>
+.title-link {
+  text-decoration: none;
+}
+.responsive-title {
+  font-size: 5vw; /* Ajustez cette valeur selon vos besoins */
+}
 .disable-events {
   pointer-events: none;
 }
 .title {
   font-family: 'Send Flowers', cursive;
-  font-size: 30px;
+  color:#739457;
 }
 </style>
