@@ -30,15 +30,13 @@
     </v-navigation-drawer>
     <v-app-bar color="white">
       <v-app-bar-nav-icon @click="drawer = !drawer" />
-      <v-spacer />
       <v-toolbar-title>
-        <router-link class="title-link" to="Index">
-          <h1 class="title d-flex justify-center align-center text-h6 text-md-h5 text-lg-h4 text-xl-h3">
+        <h1 class="title d-flex justify-center align-center text-h5 text-md-h4 text-lg-h4 text-xl-h4">
+          <router-link class="title-link" to="Index">
             Les Circuits de Constantine
-          </h1>
-        </router-link>
+          </router-link>
+        </h1>
       </v-toolbar-title>
-      <v-spacer />
       <v-img max-height="50" max-width="50" src="@/assets/logo.png" />
     </v-app-bar>
   </div>
@@ -47,7 +45,6 @@
 <script>
   export default {
     name: 'AppHeader',
-    components: {},
     data: () => ({
       drawer: false,
       selectedItem: 1,
@@ -59,8 +56,6 @@
         { text: 'Circuit Test', icon: 'mdi-bus-side', to: 'CircuitTest' },
       ],
     }),
-    computed: {
-    },
     methods: {
       logout () {
         this.$router.push('connexion')
@@ -72,15 +67,11 @@
 <style scoped>
 .title-link {
   text-decoration: none;
-}
-.responsive-title {
-  font-size: 5vw; /* Ajustez cette valeur selon vos besoins */
-}
-.disable-events {
-  pointer-events: none;
+  color: inherit;
 }
 .title {
-  font-family: 'Send Flowers', cursive;
-  color:#739457;
+  font-family: 'Great Vibes', cursive;
+  color: #176535;
+  /* font-weight: bold; */
 }
 </style>

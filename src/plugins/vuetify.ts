@@ -53,19 +53,19 @@ import { createVuetify } from 'vuetify'
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
 export default createVuetify({
   // theme: {
-  //   defaultTheme: 'myCustomLightTheme',
+  //   defaultTheme: 'dark',
   //   themes: {
   //     myCustomLightTheme,
   //   },
   // },
-  defaults: {
-    global: {
-      style: {
-        color: '#362f2d',
-        h1: {
-          color: '#362f2d',
-        },
-      },
-    },
-  },
+  // defaults: {
+  //   global: {
+  //     style: {
+  //       color: '#362f2d',
+  //       h1: {
+  //         color: '#362f2d',
+  //       },
+  //     },
+  //   },
+  // },
 })

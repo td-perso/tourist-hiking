@@ -13,6 +13,7 @@ declare module 'vue' {
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     ICarbonAccessibility: typeof import('~icons/carbon/accessibility')['default']
     IFa6BrandsXTwitter: typeof import('~icons/fa6-brands/x-twitter')['default']
+    IMaterialSymbolsHiking: typeof import('~icons/material-symbols/hiking')['default']
     IMdiAccountBox: typeof import('~icons/mdi/account-box')['default']
     IMdiBiathlon: typeof import('~icons/mdi/biathlon')['default']
     PageOne: typeof import('./components/PageOne.vue')['default']

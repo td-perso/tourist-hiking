@@ -11,7 +11,7 @@
 </script>
 <style scoped>
 .router-view-background {
-  background-color: white; /* Changez cette couleur selon vos besoins */
+  background-color: #176535; /* Changez cette couleur selon vos besoins */
   /* min-height: 100vh;  */
 }
 </style>
