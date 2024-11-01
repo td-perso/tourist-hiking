@@ -1,0 +1,1 @@
+import{_ as t,o as n,ab as a,q as o}from"./index-CZ0e37s_.js";const r={name:"CircuitTwo",components:{}};function s(c,e,i,l,p,u){return n(),a("div",null,e[0]||(e[0]=[o("main",null,[o("h1",null,"Circuit 2")],-1)]))}const _=t(r,[["render",s],["__scopeId","data-v-e8ad4649"]]);export{_ as default};
