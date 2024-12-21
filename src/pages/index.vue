@@ -28,9 +28,11 @@
                 </p>
               </v-card-text>
               <v-card-actions>
-                <v-btn color="green" text to="circuit">
-                  Détails
-                </v-btn>
+                <router-link to="Circuit">
+                  <v-btn color="green" text>
+                    Détails
+                  </v-btn>
+                </router-link>
               </v-card-actions>
             </v-card>
           </v-col>

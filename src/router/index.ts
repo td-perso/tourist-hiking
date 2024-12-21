@@ -5,12 +5,12 @@
  */
 
 // Composables
-import { createRouter, createWebHashHistory } from 'vue-router/auto'
+import { createRouter, createWebHistory } from 'vue-router/auto'
 import { setupLayouts } from 'virtual:generated-layouts'
 import { routes } from 'vue-router/auto-routes'
 
 const router = createRouter({
-  history: createWebHashHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: setupLayouts(routes),
 })
 
@@ -29,7 +29,7 @@ router.onError((err, to) => {
   }
 })
 
-router.addRoute({ path: '/:catchAll(.*)', redirect: '/' })
+router.addRoute({ path: '/:catchAll(.*)', redirect: { path: 'Index' } })
 
 router.isReady().then(() => {
   localStorage.removeItem('vuetify:dynamic-reload')

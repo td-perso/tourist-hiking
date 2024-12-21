@@ -24,7 +24,7 @@
       <v-app-bar-nav-icon @click="drawer = !drawer" />
       <v-toolbar-title>
         <h1 class="title d-flex justify-center align-center text-h5 text-md-h4 text-lg-h4 text-xl-h4">
-          <router-link class="title-link" to="/">
+          <router-link class="title-link" to="Index">
             Les Circuits de Constantine
           </router-link>
         </h1>
@@ -41,7 +41,7 @@
       drawer: false,
       selectedItem: 1,
       items: [
-        { text: 'Accueil', icon: 'mdi-home', to: '/' },
+        { text: 'Accueil', icon: 'mdi-home', to: 'Index' },
         { text: 'Circuit 1', subtitle: 'Constantine à travers ses ponts', icon: 'mdi-walk', to: 'Circuit' },
       ],
     }),
