@@ -29,7 +29,7 @@ router.onError((err, to) => {
   }
 })
 
-router.addRoute({ path: '/:catchAll(.*)', redirect: { path: 'Index' } })
+router.addRoute({ path: '/:catchAll(.*)', redirect: { path: '/' } })
 
 router.isReady().then(() => {
   localStorage.removeItem('vuetify:dynamic-reload')
