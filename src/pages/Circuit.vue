@@ -478,14 +478,8 @@
 </template>
 
 <script>
-  import { useGoTo } from 'vuetify'
-
   export default {
     name: 'Circuit',
-    setup () {
-      const goTo = useGoTo()
-      return { goTo }
-    },
     data () {
       return {
         dialog: false,
@@ -546,9 +540,6 @@
         this.dialog = true
       },
       closeDialog () { this.dialog = false },
-      onClick (title) {
-        this.goTo(title)
-      },
     },
   }
 </script>
