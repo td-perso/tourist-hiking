@@ -19,14 +19,6 @@
           :to="item.to"
         />
       </v-list>
-      <template #append>
-        <v-divider />
-        <div class="pa-2">
-          <v-btn block color="red" dark @click="logout">
-            <v-icon>mdi-logout</v-icon> Logout
-          </v-btn>
-        </div>
-      </template>
     </v-navigation-drawer>
     <v-app-bar color="white">
       <v-app-bar-nav-icon @click="drawer = !drawer" />
@@ -50,10 +42,7 @@
       selectedItem: 1,
       items: [
         { text: 'Accueil', icon: 'mdi-home', to: 'Index' },
-        { text: 'Circuit 1', subtitle: 'Nom du circuit 1', icon: 'mdi-walk', to: 'CircuitOne' },
-        { text: 'Circuit 2', subtitle: 'Nom du circuit 2', icon: 'mdi-bike', to: 'CircuitTwo' },
-        { text: 'Circuit 3', subtitle: 'Nom du circuit 3', icon: 'mdi-car-side', to: 'CircuitThree' },
-        { text: 'Circuit Test', icon: 'mdi-bus-side', to: 'CircuitTest' },
+        { text: 'Circuit 1', subtitle: 'Constantine à travers ses ponts', icon: 'mdi-walk', to: 'Circuit' },
       ],
     }),
     methods: {
