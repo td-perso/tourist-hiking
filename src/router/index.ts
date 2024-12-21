@@ -29,7 +29,16 @@ router.onError((err, to) => {
   }
 })
 
-router.addRoute({ path: '/:catchAll(.*)', redirect: 'Index' })
+router.addRoute({
+  path: '/:catchAll(.*)',
+  redirect: to => {
+    if (to.path !== '/Index') {
+      return '/Index'
+    }
+    console.warn('Avoided recursive redirection for path:', to.path)
+    return '/'
+  },
+})
 
 router.isReady().then(() => {
   localStorage.removeItem('vuetify:dynamic-reload')
