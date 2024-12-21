@@ -1,0 +1,1 @@
+import{_ as n,o,a8 as r,q as t}from"./index-B7JrplsT.js";const a={name:"CircuitThree",components:{}};function s(c,e,i,d,l,p){return o(),r("div",null,e[0]||(e[0]=[t("main",null,[t("h1",null,"Circuit 3")],-1)]))}const _=n(a,[["render",s],["__scopeId","data-v-8d92dfa2"]]);export{_ as default};
